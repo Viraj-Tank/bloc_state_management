@@ -1,16 +1,18 @@
 # bloc_state_management
 
-A new Flutter project.
+Bloc State Management
 
-## Getting Started
+add Bloc generic class
+Bloc<Event,ReceiverSide>
 
-This project is a starting point for a Flutter application.
+Event -> these event we can invoke and set business login accordingly
+ReceiverSide -> state which we can read/watch on the receiver side (it will return that data type)
 
-A few resources to get you started if this is your first Flutter project:
+// it will change the data inside the bloc or and we can read its property
+context.read<CounterBloc>().state
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+// it will change the data inside the bloc or and it will also update property at the receiver side
+// watch detects the changes and rebuild the widget with updated value
+context.watch<CounterBloc>().state
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+BlocBuilder widget is used to render only the particular widget and not the whole screen
