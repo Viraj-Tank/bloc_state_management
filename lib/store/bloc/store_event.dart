@@ -1,4 +1,3 @@
-part of 'store_bloc.dart';
 
 abstract class StoreEvent {
   const StoreEvent();

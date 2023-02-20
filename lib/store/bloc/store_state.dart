@@ -1,16 +1,16 @@
-part of 'store_bloc.dart';
+import '../models/product.dart';
 
 enum StoreRequest { unknown, requestInProgress, requestSuccess, requestFailed }
 
 class StoreState {
-  final List<Product>? products;
-  final StoreRequest? productStatus;
-  final Set<int>? cartIds;
+  final List<Product> products;
+  final StoreRequest productStatus;
+  final Set<int> cartIds;
 
   StoreState({
-    this.products,
+    this.products = const [],
     this.productStatus = StoreRequest.unknown,
-    this.cartIds,
+    this.cartIds = const {},
   });
 
   StoreState copyWith({
