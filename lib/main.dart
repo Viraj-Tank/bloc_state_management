@@ -5,7 +5,7 @@ import 'counter_example/bloc/counter/counter_bloc.dart';
 import 'counter_example/ui/home_page.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const StoreApp());
 }
 
 class MyApp extends StatelessWidget {
